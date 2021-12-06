@@ -5,4 +5,9 @@ class UsersController < ApplicationController
     render json: user, include: :items
   end
 
+  def index
+    users = User.all
+    render json: users, include: :items
+  end
+
 end
